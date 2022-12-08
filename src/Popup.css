@@ -1,0 +1,184 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.popupBody {
+  position: absolute;
+  top: 281px;
+  left: 420px;
+  top: calc(50% - 231px);
+  left: calc(50% - 300px);
+
+  /* position: relative;
+  top: 281px; */
+  width: 600px;
+  height: 462px;
+  margin: auto;
+  border-radius: 4px;
+  background: white;
+}
+
+.newFormMiddleLine {
+  top: 70px;
+  left: 292px;
+  height: 316px;
+  background: #C4C4C4;
+}
+
+.leftForm {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  width: 260px;
+}
+
+.rightForm {
+  position: absolute;
+  left: 312px;
+  top: 50px;
+  bottom: 20px;
+  width: 260px;
+}
+
+.newHeader {
+  position: relative;
+  height: 50px;
+  background: #003A5D;
+}
+
+.newHeader>SPAN {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 20px;
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.73px;
+}
+
+.newHeader>BUTTON {
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  height: 13px;
+  line-height: 13px;
+  padding: 0px;
+  border: 0px;
+  background: none;
+  color: rgb(255,255,255,0.5);
+  transition-duration: 0.1s;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.newHeader>BUTTON:hover {
+  color: rgb(255,255,255,1);
+}
+
+.popupBody h1 {
+  width: 260px;
+  margin: 0px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.popupBody h2 {
+  width: 260px;
+  margin: 0px;
+  margin-top: 11px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+.popupBody INPUT[type=text], INPUT[type=number] {
+  margin: 0px;
+  height: 22px;
+  width: 250px;
+  padding: 0px;
+  padding-left: 10px;
+  font-size: 12px;
+  border: 1px solid #CCCCCC;
+}
+
+.popupBody LABEL {
+  display: flex;
+  align-items:center;
+  width: 260px;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 12px;
+
+}
+
+.popupBody SELECT {
+  margin: 0px;
+  width: 100%;
+  height: 24px;
+  font-size: 12px;
+  color: rgb(51,51,51,1);
+  padding-left: 6px;
+  border: 1px solid #CCCCCC;
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.1018 8C5.02785 8 4.45387 9.2649 5.16108 10.0731L10.6829 16.3838C11.3801 17.1806 12.6197 17.1806 13.3169 16.3838L18.8388 10.0731C19.5459 9.2649 18.972 8 17.898 8H6.1018Z' fill='%23212121'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; 
+  background-position-y: 50%;
+  background-position-x: 98%; */
+}
+
+
+.bottomFormCancelSave {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 260px;
+  margin: 0px;
+
+  text-align: right;
+}
+
+.bottomFormCancelSave INPUT[type=button],INPUT[type=submit] {
+  height: 32px;
+  font-size: 14px;
+  font-weight: 700;
+  transition-duration: 0.1s;
+  box-shadow: inset 0px -2px 0px #CCCCCC;
+}
+
+.bottomFormCancelSave INPUT[type=button] {
+  width: 92px;
+  background: white;
+  color: #333333;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.bottomFormCancelSave INPUT[type=button]:hover {
+  background: #DDDDDD;
+}
+
+
+.bottomFormCancelSave INPUT[type=submit] {
+  background: #33AAD0;
+  color: #FFFFFF;
+  width: 63px;
+  border-width: 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.bottomFormCancelSave INPUT[type=submit]:hover {
+  background: #238db1;
+}
+
