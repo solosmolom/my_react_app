@@ -16,21 +16,21 @@ const Select = ({title, options}) => {
 }
 
 function Popup({closePopup}) {
-
   const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
   const [jobName, setJobName] = useState();
   const [jobDuration, setJobDuration] = useState(randomIntFromInterval(10,10000));
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     if (jobName !== undefined && jobDuration !== undefined) {
-      addJob(jobName,jobDuration);
+      addJob(jobName, jobDuration);
       closePopup();
     }
   }
 
   return (
     <div className="popup">
-      <div className="popupBody">
+      <div className="popupBody animate">
         <div className="newHeader">New Job<button onClick={closePopup}>&#9587;</button></div>
         <form onSubmit={handleSubmit}>
           <div className="formLeft">
