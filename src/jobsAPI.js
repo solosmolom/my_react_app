@@ -10,9 +10,7 @@ export function reorderJob(jobName, setUp) {
       method: 'POST',
       headers : FETCH_HEADERS
     })
-    .then((res) => (res.status === 200) ?
-      console.log("job reorderd successfully")
-      : console.log("error occurred (status code: " + res.status + ")"));
+    .then((res) => console.log("status code: "+res.status));
 }
 
 export function cancelJob(jobName) {
@@ -21,12 +19,7 @@ export function cancelJob(jobName) {
       method: 'POST',
       headers : FETCH_HEADERS
     })
-    .then((res) => {
-      if (res.status === 200) {
-        console.log("job canceled successfully");
-      } else
-        console.log("error occurred (status code: " + res.status + ")");
-    });
+    .then((res) => console.log("status code: "+res.status));
 }
 
 export function deleteJob(jobName) {
@@ -35,9 +28,7 @@ export function deleteJob(jobName) {
       method: 'DELETE',
       headers : FETCH_HEADERS
     })
-    .then((res) => (res.status === 200) ?
-      console.log("job deleted successfully")
-      : console.log("error occurred (status code: " + res.status + ")"));
+    .then((res) => console.log("status code: "+res.status));
 }
 
 export function getJobs(setQueue) {
@@ -60,7 +51,5 @@ export function addJob(jobName, jobDuration) {
         "duration": jobDuration
     })
   })
-  .then((res) => (res.status === 200) ?
-    console.log("job added successfully")
-    : console.log("error occurred (status code: " + res.status + ")"));
+  .then((res) => console.log("status code: "+res.status));
 }
