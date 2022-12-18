@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { addJob } from './../jobsAPI';
+import { getIcon } from './../utils';
 import "./Popup.css";
 
 const Select = ({title, options}) => {
@@ -31,7 +32,7 @@ function Popup({closePopup}) {
   return (
     <div className="popup">
       <div className="popupBody animate">
-        <div className="newHeader">New Job<button onClick={closePopup}>&#9587;</button></div>
+        <div className="newHeader">New Job<button onClick={closePopup}>{getIcon("eks")}</button></div>
         <form onSubmit={handleSubmit}>
           <div className="formLeft">
             <h1>Job Details</h1>

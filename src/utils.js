@@ -60,6 +60,12 @@ export function getIcon(iconLabel){
           <rect x="9" width="4" height="14" fill="black"/>
         </svg>
       )
+    case 'eks':
+      return (
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.5" fillRule="evenodd" clipRule="evenodd" d="M7.77546 6.5L13 1.27546L11.7245 0L6.5 5.22454L1.27546 0L0 1.27546L5.22454 6.5L0 11.7245L1.27546 13L6.5 7.77546L11.7245 13L13 11.7245L7.77546 6.5Z" fill="white"/>
+        </svg>
+      )
     default:
       return (
         <svg></svg>
