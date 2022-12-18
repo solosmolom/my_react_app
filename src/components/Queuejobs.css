@@ -74,8 +74,8 @@
 .queueItemUp>SVG { bottom: 0px; }
 .queueItemDown>SVG { top: 0px; }
 
-.mainRight LI:first-child .queueItemUp,
-.mainRight LI:last-child .queueItemDown {
+.mainRight LI>BUTTON:disabled,
+.mainRight LI>BUTTON[disabled] {
   opacity: 0.3;
 }
 

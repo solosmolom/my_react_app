@@ -5,11 +5,30 @@ import { timeFormat, getIcon } from './../utils';
 import rect130 from './../imgs/Rectangle_130.jpg';
 import './Queuejobs.css';
 
-const QueueJob = ({job, index}) => {
+function queueReorderButton(job, index, total) {  
   return (
-    <><li key={job.name}>
-      <button className="queueItemUp" onClick={() => reorderJob(job.name, true)}>{getIcon('up')}</button>
-      <button className="queueItemDown" onClick={() => reorderJob(job.name, false)}>{getIcon('down')}</button>
+    <>
+      <button 
+        className="queueItemUp" 
+        disabled={(index === 1) && "disabled"} 
+        onClick={() => reorderJob(job.name, true)}>
+        {getIcon('up')}
+      </button>
+      <button 
+        className="queueItemDown" 
+        disabled={(index === total - 1) && "disabled"} 
+        onClick={() => reorderJob(job.name, false)}>
+        {getIcon('down')}
+      </button>
+    </>
+  );
+  
+}
+
+const QueueJob = ({job, index, total}) => {
+  return (
+    <li key={job.name}>
+      {queueReorderButton(job, index, total)}
       <img alt="queue item" src={rect130}></img>
       <div className="queuedItemDataLabel">
         <span>{index + "."}</span>
@@ -24,8 +43,7 @@ const QueueJob = ({job, index}) => {
       <button className="deleteJob" onClick={() => deleteJob(job.name)}>{getIcon('trash')}</button>
       <button className="duplicateJob">{getIcon('duplicate')}</button>
       <button className="arrowJob">{getIcon('rightArrow')}</button>
-      </li>
-    </>
+    </li>
   );
 }
 
@@ -41,7 +59,7 @@ function QueueJobs({queue, setQueue}) {
           </div>
           <ul>
             {queue && queue.length>0 && queue.map((job, index) => (job.status === "queued") &&
-              <QueueJob key={job.name} job={job} index={index}/>
+              <QueueJob key={job.name} job={job} index={index} total={queue.length}/>
             )}
           </ul>
           {open ? <Popup queue={queue} setQueue={setQueue}  closePopup={() => setOpen(false)} /> : null}
