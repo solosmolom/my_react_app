@@ -1,0 +1,145 @@
+.mainRight {
+  position: absolute;
+  top: 32px;
+  height: 918px;
+  left: 660px;
+  width: 728px;
+  padding-left: 20px;
+}
+
+.mainRight .header { color: #444444; }
+
+.mainRight .header>BUTTON {
+  width: 110px;
+  height: 38px;
+  background: #00A1E0;
+  color: white;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.2);
+  border: 2px solid #e7e7e7;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.mainRight UL {
+  padding: 0px;
+  list-style-type: none;
+}
+
+.mainRight LI {
+  position: relative;
+  width: 725px;
+  height: 96px;
+  margin-bottom: 12px;
+  background: #F7F9FC;
+  border: 1px solid #003A5D;
+  border-radius: 8px;
+}
+
+.mainRight LI>SPAN {
+  position: absolute;
+  display: inline-block;
+}
+
+.queueItemUp,
+.queueItemDown {
+  position: absolute;
+  left: 0px;
+  width: 55px;
+  border-width: 0px;
+  background: transparent;
+  border-right: 1px solid #003A5D;
+}
+
+.queueItemUp>SVG,
+.queueItemDown>SVG {
+  position: absolute;
+  left: 12px;
+}
+
+.queueItemUp {
+  top: 0px;
+  height: 50px;
+  border-radius: 8px 0px 0px 0px;
+  border-bottom: 1px solid #003A5D;
+}
+
+.queueItemDown {
+  top: 50px;
+  height: 48px;
+  border-radius: 0px 0px 0px 8px;
+  border-top: 0px;
+}
+
+.queueItemUp>SVG { bottom: 0px; }
+.queueItemDown>SVG { top: 0px; }
+
+.mainRight LI:first-child .queueItemUp,
+.mainRight LI:last-child .queueItemDown {
+  opacity: 0.3;
+}
+
+.mainRight LI>IMG {
+  position: absolute;
+  top: 6px;
+  left: 61px;
+  width: 130px;
+}
+
+.queuedItemDataLabel,
+.queuedItemDataInfo {
+  position: absolute;
+  left: 204px;
+  width: 380px;
+}
+
+.queuedItemDataLabel {
+  top: 0px;
+  height: 32px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #212f44;
+  padding-top: 18px;
+}
+
+.queuedItemDataLabel>SPAN:first-child {
+  width: 30px;
+  display: inline-block;
+}
+
+.queuedItemDataInfo {
+  top: 50px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #003A5d;
+  padding-top: 3px;
+  padding-bottom: 17px;
+}
+
+.queuedItemDataInfo>* { position: absolute; }
+.queuedItemDataInfo>*:nth-child(2) { left: 30px; }
+.queuedItemDataInfo>*:nth-child(3) { left: 140px; }
+.queuedItemDataInfo>*:nth-child(4) { left: 168px; }
+
+.deleteJob,
+.duplicateJob,
+.arrowJob {
+  position: absolute;
+  border-width: 0px;
+}
+
+.deleteJob {
+  top: 34px;
+  right: 97px;
+}
+
+.duplicateJob {
+  top: 32px;
+  right: 50px;
+}
+
+.arrowJob {
+  top: 36px;
+  right: 20px;
+}
