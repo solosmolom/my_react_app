@@ -28,7 +28,7 @@ function App() {
       <div className="mainRight">
         <QueueJobs queue={queue} setJobForm={setJobForm} />      
       </div>
-      <Popup jobForm={jobForm} setJobForm={setJobForm} />
+      {jobForm ? <Popup setJobForm={setJobForm} /> : null}
     </div>
   );
 }

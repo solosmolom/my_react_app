@@ -53,34 +53,33 @@ function formRight(setJobForm) {
   );
 }
 
-function Popup({jobForm, setJobForm}) {
+function Popup({setJobForm}) {
   const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
   const [jobName, setJobName] = useState();
   const [jobDuration, setJobDuration] = useState(randomIntFromInterval(10,10000));
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (jobName !== undefined && jobDuration !== undefined) {
+
+    if (jobName !== undefined) {
       addJob(jobName, jobDuration);
       setJobForm(false);
     }
   }
 
-  return (jobForm) ?
-    (
-      <div className="popup">
-        <div className="popupBody">
-          <div className="newHeader">
-            New Job
-            <button onClick={() => setJobForm(false)}>{getIcon("eks")}</button>
-          </div>
-          <form onSubmit={handleSubmit}>
-            {formLeft(setJobName, setJobDuration)}
-            {formRight(setJobForm)}
-          </form>      
+  return (
+    <div className="popup">
+      <div className="popupBody">
+        <div className="newHeader">
+          New Job
+          <button onClick={() => setJobForm(false)}>{getIcon("eks")}</button>
         </div>
+        <form onSubmit={handleSubmit}>
+          {formLeft(setJobName, setJobDuration)}
+          {formRight(setJobForm)}
+        </form>      
       </div>
-    ) : null;
+    </div>);
 }
 
 export default Popup;
