@@ -12,17 +12,13 @@ function App() {
   const [queue, setQueue] = useState();
   const [jobForm, setJobForm] = useState(false);
 
-  function useInterval() {
-    useEffect(() => {
-      if (SERVER_UPDATE_INTERVAL !== null) {
-        let id = setInterval(() => getJobs(setQueue), SERVER_UPDATE_INTERVAL);
-        return () => clearInterval(id);
-      }
-    }, []);
-  }
+  useEffect(() => {
+    if (SERVER_UPDATE_INTERVAL !== null) {
+      let id = setInterval(() => getJobs(setQueue), SERVER_UPDATE_INTERVAL);
+      return () => clearInterval(id);
+    }
+  }, []);
 
-  useInterval();
-  
    return (
     <div className="App">
       <div className="mainLeft">
