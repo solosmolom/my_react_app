@@ -1,14 +1,3 @@
-
-.mainLeft {
-  position: absolute;
-  top: 32px;
-  height: 918px;
-  left: 32px;
-  width: 600px;
-  padding-right: 24px;
-  border-right: 1px solid black;
-}
-
 .printingHeaderLabel { color: #333333; }
 .printingHeaderTimeLeft { color: #3077E2; }
 
@@ -98,43 +87,3 @@
   color: #003A5D;
   font-weight: 700;
 } 
-
-.jobManagerHeader { color: #444444; }
-
-.mainLeft UL {
-  position: relative;
-  width: 600px;
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.mainLeft LI {
-  position: relative;
-  height: 40px;
-  line-height: 40px;
-  color: #111111;
-  padding-left: 20px;
-  box-shadow: inset 0px 1px 0px #DDDDDD;
-
-}
-
-.mainLeft LI>SPAN {
-  position: absolute;
-  right: 20px;
-  width: 130px;
-  text-align: right;
-  font-weight: bold;
-}
-
-.mainLeft UL LI:nth-child(3)>SPAN:last-child,
-.mainLeft UL LI:nth-child(4)>SPAN:last-child {
-  color: #75B67B;
-}
-
-.mainLeft LI:nth-child(3)>SPAN:last-child>SVG,
-.mainLeft LI:nth-child(4)>SPAN:last-child>SVG {  
-  position: absolute;
-  bottom: 12px;
-  right: 83px;
-}

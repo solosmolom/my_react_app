@@ -15,7 +15,7 @@ function PrintingJob ({queue}) {
     const job = queue[0];
 
     return (
-      <div className="mainLeft">
+      <div className="printing">
         <div className="header">
           <span className="printingHeaderLabel">CURRENT PRINTING JOB |</span>
           <span className="printingHeaderTimeLeft"> 20% {timeFormat(job.duration)}</span>
@@ -35,13 +35,6 @@ function PrintingJob ({queue}) {
             <div>2/4/20, 7:15 PM</div>
           </span>
         </div>
-        <div className="header jobManagerHeader">JOB MANAGER STATUS</div>
-        <ul>
-          <li>Printer IP Address<span>192.168.22.154</span></li>
-          <li>Printer Name<span>Boston J750</span></li>
-          <li>Status<span>{getIcon('greenCheck')}Connected</span></li>
-          <li>Embedded software <span>{getIcon('greenCheck')}Connected</span></li>
-        </ul>
       </div>
     );
   }

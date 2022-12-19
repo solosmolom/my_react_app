@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { getJobs } from './jobsAPI';
-import QueueJobs from './components/QueueJobs';
 import PrintingJob from './components/PrintingJob';
+import QueueJobs from './components/QueueJobs';
+import JobManager from './components/JobManager';
+import Popup from './components/Popup';
+import { getJobs } from './jobsAPI';
 import './App.css';
 
 const SERVER_UPDATE_INTERVAL = 1000;
 
 function App() {
   const [queue, setQueue] = useState();
+  const [jobForm, setJobForm] = useState(false);
 
   function useInterval() {
     useEffect(() => {
@@ -22,8 +25,14 @@ function App() {
   
    return (
     <div className="App">
-      <PrintingJob queue={queue} />
-      <QueueJobs queue={queue} setQueue={setQueue} />
+      <div className="mainLeft">
+        <PrintingJob queue={queue} />
+        <JobManager />
+      </div>
+      <div className="mainRight">
+        <QueueJobs queue={queue} setJobForm={setJobForm} />      
+      </div>
+      <Popup jobForm={jobForm} setJobForm={setJobForm} />
     </div>
   );
 }

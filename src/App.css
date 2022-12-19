@@ -8,6 +8,26 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.mainLeft,
+.mainRight {
+  position: absolute;
+  top: 32px;
+  height: 918px;
+}
+
+.mainLeft {
+  left: 32px;
+  width: 600px;
+  padding-right: 24px;
+  border-right: 1px solid black;
+}
+
+.mainRight {
+  left: 660px;
+  width: 728px;
+  padding-left: 20px;
+}
+
 .header {
   position: relative;
   height: 60px;
@@ -26,7 +46,7 @@ BUTTON {
 }
 
 BUTTON:hover { opacity: 0.7; }
-BUTTON:active { transform: translateY(4px); }
+BUTTON:active:not(:disabled) { transform: translateY(4px); }
 
 .header>BUTTON {
   position: absolute;
